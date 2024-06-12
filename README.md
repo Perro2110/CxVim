@@ -5,7 +5,7 @@ crea file .sh come segue:
 ```.sh
 #!/bin/bash
 
-# Aggiorna i pacchetti e installa vim e le dipendenze necessarie
+# Aggiorna i pacchetti / installa vim / installa dipendenze necessarie
 sudo apt update
 sudo apt install -y vim curl build-essential cmake python3-dev git
 
@@ -59,11 +59,11 @@ EOF
 # Installa i plugin di Vim
 vim +PlugInstall +qall
 
-# Compila YouCompleteMe
+# Compila 
 cd ~/.vim/plugged/YouCompleteMe
 python3 install.py --clangd-completer
 
-# Crea il file di configurazione per YouCompleteMe
+# Crea il file di configurazione
 cat <<EOF > ~/.vim/.ycm_extra_conf.py
 def Settings( **kwargs ):
     return {
@@ -71,7 +71,7 @@ def Settings( **kwargs ):
     }
 EOF
 
-echo "Configurazione completata. Apri Vim e inizia a scrivere codice C!"
+echo "🐔 Configurazione completata. Apri Vim e inizia a scrivere codice C come persone serie! 🐔"
 ```
 Salva questo script in un file, ad esempio setup_vim.sh, e rendilo eseguibile:
 ```.sh
