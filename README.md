@@ -5,9 +5,9 @@ crea file .sh come segue:
 ```.sh
 #!/bin/bash
 
-# Aggiorna i pacchetti/installa vim/dipendenze necessarie
+# Aggiorna i pacchetti e installa vim e le dipendenze necessarie
 sudo apt update
-sudo apt install -y vim curl build-essential cmake python3-dev
+sudo apt install -y vim curl build-essential cmake python3-dev git
 
 # Installa vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -22,9 +22,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'Valloric/YouCompleteMe'
 
 " Syntax highlighting and other useful plugins
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
+
+" Gruvbox theme
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -47,9 +50,13 @@ set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Gruvbox theme settings
+set background=dark
+colorscheme gruvbox
 EOF
 
-# Installa plugin di Vim
+# Installa i plugin di Vim
 vim +PlugInstall +qall
 
 # Compila YouCompleteMe
