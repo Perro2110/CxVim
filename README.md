@@ -1,5 +1,7 @@
 # CxVim
 Installazione minima per avere un buon ide di <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" alt="java" width="20" height="20"/> attraverso piccole modifiche su <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Icon-Vim.svg/1024px-Icon-Vim.svg.png" alt="java" width="20" height="20"/>
+
+crea file .sh come segue:
 ```.sh
 #!/bin/bash
 
